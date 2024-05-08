@@ -18,11 +18,11 @@ ESP8266WiFiMulti WiFiMulti;
 #define STASSID  "TurkTelekom_ZTNTX3_2.4GHz"
 #define STAPSK   "d4fzKRT3syEh"
 
-#define OCPP_BACKEND_URL   "ws://192.168.1.58:8081/IonBee/OCPP/6dd3911b691b4ef79305f473ecef8f81"
+#define OCPP_BACKEND_URL   "ws://192.168.1.58:8081/CompanyName/OCPP/6dd3911b691b4ef79305f473ecef8f81"
 #define OCPP_CHARGE_BOX_ID "SN10052309182868"
 
 
-//
+ 
 //  Settings which worked for my SteVe instance:
 //
 //#define OCPP_BACKEND_URL   "ws://192.168.178.100:8180/steve/websocket/CentralSystemService"

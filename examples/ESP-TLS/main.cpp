@@ -16,8 +16,8 @@ ESP8266WiFiMulti WiFiMulti;
 #include <MicroOcpp.h>
 #include <MicroOcpp/Core/Connection.h> //need for setting TLS credentials
 
-#define STASSID  "YOUR_WIFI_SSID"
-#define STAPSK   "YOUR_WIFI_PW"
+#define STASSID  "TurkTelekom_ZTNTX3_2.4GHz"
+#define STAPSK   "d4fzKRT3syEh"
 
 #define OCPP_HOST  "echo.websocket.events"
 #define OCPP_PORT  443
