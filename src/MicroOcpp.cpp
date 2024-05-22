@@ -128,7 +128,6 @@ void mocpp_initialize(const char *backendUrl, const char *chargeBoxId, const cha
         url += chargeBoxId;
     }
 
-    MO_DBG_INFO("connecting to %s -- (host: %s, port: %u)", url.c_str(), host.c_str(), port);
 
     if (!webSocket)
         webSocket = new WebSocketsClient();
@@ -141,7 +140,13 @@ void mocpp_initialize(const char *backendUrl, const char *chargeBoxId, const cha
     else
     {
         // server address, port, URL
-        webSocket->begin(host.c_str(), port, url.c_str(), "ocpp1.6");
+        // webSocket->setExtraHeaders("Sec-WebSocket-Protocol: ocpp1.6");
+
+        // webSocket->setExtraHeaders("Authorization: Basic YWRtaW46YWRtaW4=");
+        // webSocket->setExtraHeaders
+        webSocket->begin("192.168.1.36", 8081, "/IonBee/OCPP/0ce6480be66a4f5e9298525cb11a3d7e/SN10052307112654", "ocpp1.6");
+            MO_DBG_INFO("connecting to %s -- (host: %s, port: %u)", url.c_str(), host.c_str(), port);
+
     }
 
     // try ever 5000 again if connection has failed
